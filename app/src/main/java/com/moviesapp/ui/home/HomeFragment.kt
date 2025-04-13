@@ -53,7 +53,11 @@ class HomeFragment : Fragment() {
 
                     is MovieViewState.MovieList -> {
                         binding.progressBar.visibility = View.GONE
-                        adapter.submitData(viewLifecycleOwner.lifecycle, state.movies)
+
+                        parentFragment?.viewLifecycleOwner?.lifecycle?.let {
+                            adapter.submitData(it, state.movies)
+
+                        }
                     }
                 }
             }

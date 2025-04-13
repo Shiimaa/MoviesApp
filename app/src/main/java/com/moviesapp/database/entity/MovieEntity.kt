@@ -14,6 +14,6 @@ data class MovieEntity(
     var isFavorite: Boolean = false
 )
 
-fun MovieEntity.toMovie(): Movie {
-    return Movie(id, title, releaseDate, imagePath, isFavorite)
+fun MovieEntity.toMovie(isFav: Boolean = isFavorite): Movie {
+    return Movie(id, title, releaseDate, imagePath, isFav)
 }

@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import androidx.paging.map
 import com.moviesapp.data.model.Movie
-import com.moviesapp.data.MovieRepository
+import com.moviesapp.data.repository.MovieRepository
 import com.moviesapp.database.entity.toMovie
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
