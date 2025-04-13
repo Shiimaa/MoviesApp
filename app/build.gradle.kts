@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -62,6 +63,21 @@ dependencies {
 
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.complier)
+
+    implementation(libs.androidx.retrofit)
+    implementation(libs.androidx.retrofit.gson)
+    implementation(libs.androidx.retrofit.logging)
+
+    implementation(libs.androidx.paging)
+
+    implementation(libs.glide)
+
+    implementation(libs.androidx.jetpack.coroutines)
+    implementation(libs.androidx.jetpack.coroutines.core)
+
+    implementation(libs.androidx.room)
+    implementation(libs.androidx.room.paging)
+    kapt(libs.androidx.room.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

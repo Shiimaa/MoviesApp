@@ -6,10 +6,16 @@ appcompat = "1.7.0"
 kapt = "2.0.10"
 navigationUiKtx = "2.8.9"
 daggerHiltVersion = "2.51.1"
+retrofitVersion = "2.9.0"
+retrofitLoggingVersion = "4.9.0"
+paging3Version = "3.3.6"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
+glide = "4.12.0"
+room = "2.7.0"
+coroutines = "1.7.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -18,6 +24,16 @@ androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navi
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHiltVersion" }
 dagger-hilt-complier = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHiltVersion" }
+androidx-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+androidx-retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+androidx-retrofit-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "retrofitLoggingVersion" }
+androidx-paging = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging3Version" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+androidx-room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-jetpack-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+androidx-jetpack-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -29,5 +45,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt" }
 google-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHiltVersion" }
-hilt = {id = "dagger.hilt.android.plugin"}
+hilt = { id = "dagger.hilt.android.plugin" }
+kotlin-parcelize = { id = "kotlin-parcelize" }
 
