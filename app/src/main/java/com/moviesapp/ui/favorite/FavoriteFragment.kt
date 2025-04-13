@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.moviesapp.R
 import com.moviesapp.data.model.Movie
 import com.moviesapp.databinding.FragmentFavoriteBinding
-import com.moviesapp.ui.home.HomeFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 
 @AndroidEntryPoint
 class FavoriteFragment : Fragment() {
@@ -72,7 +74,9 @@ class FavoriteFragment : Fragment() {
         adapter = FavoriteMoviesAdapter(object : FavoriteMoviesAdapter.OnItemClicked {
 
             override fun onClick(movieId: Long) {
-//                TODO("Not yet implemented")
+                val bundle = Bundle()
+                bundle.putLong("MOVIEID", movieId)
+                findNavController(view!!).navigate(R.id.action_favoriteFragment_to_detailsFragment, bundle)
             }
 
             override fun onFavClick(movie: Movie) {

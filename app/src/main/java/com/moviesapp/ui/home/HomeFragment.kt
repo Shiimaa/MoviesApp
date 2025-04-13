@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.moviesapp.R
 import com.moviesapp.data.model.Movie
 import com.moviesapp.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -72,6 +74,13 @@ class HomeFragment : Fragment() {
     private fun bindUiViews() {
         adapter = MovieAdapter(object : OnClickListener {
             override fun onItemClick(movie: Movie) {
+                val bundle = Bundle()
+                bundle.putLong("MOVIEID", movie.id)
+                findNavController(view!!).navigate(
+                    R.id.action_homeFragment_to_detailsFragment,
+                    bundle
+                )
+
             }
 
             override fun onFavClicked(movie: Movie) {

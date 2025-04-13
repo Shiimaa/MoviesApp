@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MoviesApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fav_no_data">There\'s no favorite movies</string>
+    <string name="vote_count_label">Vote</string>
 </resources>
