@@ -20,11 +20,13 @@
 
     <LinearLayout
         android:id="@+id/movie_data"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/iv_movie_poster"
         android:layout_margin="8dp"
         android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/iv_movie_fav_button"
         android:background="@android:color/transparent">
 
         <TextView

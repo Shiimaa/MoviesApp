@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.moviesapp.data.model.Movie
 import com.moviesapp.databinding.FragmentHomeBinding
@@ -19,6 +20,7 @@ class HomeFragment : Fragment() {
     private val viewModel: MovieViewModel by viewModels()
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapter: MovieAdapter
+    private var isVertical = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -79,5 +81,13 @@ class HomeFragment : Fragment() {
 
         binding.rvMovie.setLayoutManager(LinearLayoutManager(requireContext()))
         binding.rvMovie.setAdapter(adapter)
+
+        binding.ibToggleRvLayout.setOnClickListener {
+            isVertical = !isVertical
+            if (isVertical)
+                binding.rvMovie.setLayoutManager(LinearLayoutManager(requireContext()))
+            else
+                binding.rvMovie.setLayoutManager(GridLayoutManager(requireContext(), 2))
+        }
     }
 }
